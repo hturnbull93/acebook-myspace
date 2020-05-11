@@ -4,11 +4,16 @@
     <title>Acebook</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag   'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
-    <%= yield %>
+  <div class = postStyle>
+  <h1> AceBook MySpace </h1>
+  </div>
+  <%= yield %> 
+    
+    <div class = footer><p>what up?</p></div>
   </body>
 </html>
