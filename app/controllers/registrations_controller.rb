@@ -3,7 +3,7 @@ class RegistrationsController < ApplicationController
 
   def create
     user = User.create!(
-      email: params['user']['email'],
+      email: params['email'],
       password: params['user']['password'],
       auth_token: unique_auth_token
     )
@@ -15,3 +15,4 @@ class RegistrationsController < ApplicationController
       render json: { status: 500 }
     end
   end
+end
