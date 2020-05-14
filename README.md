@@ -1,32 +1,48 @@
 # AceBook MySpace
+
 [![Build Status](https://travis-ci.com/Steven-Klavins/acebook-myspace.svg?branch=master)](https://travis-ci.com/Steven-Klavins/acebook-myspace)
 
 ## [Medium Blog](https://medium.com/acebook-myspace)
 
 ## [Trello Wall](https://trello.com/b/ig2kAuJ5/myspace-acebook)
 
+This is a Rails API Backed, designed to work with the [React Frontend](https://github.com/hturnbull93/acebook-myspace-react)
+
 ## Setup Instructions
-
-1. Fork this repository to `acebook-teamname` and customize
-the below**
-
-[You can find the engineering project outline here.](https://github.com/makersacademy/course/tree/master/engineering_projects/rails)
-
-2. The card wall is [here](https://trello.com/b/ig2kAuJ5/myspace-acebook)
 
 ### How to contribute to this project
 
 See [CONTRIBUTING.md](CONTRIBUTING.md)
 
-### Quickstart
+### Quickstart for a local development server
 
-First, clone this repository. Then:
+1. Clone this repository.
+2. Clone the [React Frontend repo](https://github.com/hturnbull93/acebook-myspace-react).
+3. Prepare the Rails API server:
 
-```bash
-> bundle install
-> bin/rails db:create
-> bin/rails db:migrate
+    ```bash
+    bundle install
+    bin/rails db:setup
 
-> bundle exec rspec # Run the tests to ensure it works
-> bin/rails server # Start the server at localhost:3000
-```
+    bundle exec rspec # Run the tests to ensure it works
+    bin/rails server -p 3001 # Start the server at localhost:3001
+    ```
+
+4. Prepare the React Frontend server (from the root dir that repo):
+
+    ```bash
+    npm install
+    npm start
+    ```
+
+5. Navigate to <http://localhost:3000.>
+6. Enjoy.
+
+## The Team ❤️
+
+Angelica Beristain
+Faye Carter
+Thomas Harper
+Steve Klavins
+Ed Phillips
+Harry Turnbull
