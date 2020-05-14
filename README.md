@@ -40,9 +40,9 @@ See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## The Team ❤️
 
-Angelica Beristain
-Faye Carter
-Thomas Harper
-Steve Klavins
-Ed Phillips
-Harry Turnbull
+[Angelica Beristain](https://github.com/Angelica137)
+[Faye Carter](https://github.com/FayeCarter)
+[Thomas Harper](https://github.com/tommyrharper)
+[Steve Klavins](https://github.com/Steven-Klavins)
+[Ed Phillips](https://github.com/Edward-Phillips)
+[Harry Turnbull](https://github.com/hturnbull93)
