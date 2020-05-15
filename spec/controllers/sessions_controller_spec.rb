@@ -45,4 +45,13 @@ RSpec.describe Api::V1::SessionsController, type: :controller do
 
     expect(json['status']).to eq 401
   end     
+
+  it "POST /sessions incorrect password, responds with json status 401 " do
+    delete :destroy, params: { 
+      id: @user.id
+    }
+    json = JSON.parse(response.body)
+
+    expect(json['status']).to eq 200
+  end   
 end
