@@ -36,8 +36,8 @@ RSpec.describe Api::V1::PostsController, type: :controller do
   end
 
   it 'GET /posts returns all posts' do
-    Post.create(message: 'Mr Frodo', user_id: @user.id)
-    Post.create(message: "I'm coming with you", user_id: @user.id)
+    Post.create(message: 'Mr Frodo', user_id: @user.id, first_name: @user.first_name, last_name: @user.last_name)
+    Post.create(message: "I'm coming with you", user_id: @user.id, first_name: @user.first_name, last_name: @user.last_name)
     
     get :index
 
@@ -49,5 +49,9 @@ RSpec.describe Api::V1::PostsController, type: :controller do
     expect(json['posts'].last['message']).to eq "I'm coming with you"
     expect(json['posts'].first['user_id']).to eq @user.id
     expect(json['posts'].last['user_id']).to eq @user.id
+    expect(json['posts'].first['first_name']).to eq @user.first_name
+    expect(json['posts'].first['last_name']).to eq @user.last_name
+    expect(json['posts'].last['first_name']).to eq @user.first_name
+    expect(json['posts'].last['last_name']).to eq @user.last_name
   end
 end
