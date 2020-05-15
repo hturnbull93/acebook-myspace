@@ -4,9 +4,12 @@ class Api::V1::PostsController < ApplicationController
 
   def create
     begin
+      @user = User.find(params[:user_id])
       @post = Post.create(
         message: params[:message],
-        user_id: params[:user_id]
+        user_id: @user.id,
+        first_name: @user.first_name,
+        last_name: @user.last_name
       )
       render json: {
         post: @post, 
